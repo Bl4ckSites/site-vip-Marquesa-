@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Marquesa Ruiva · Links</title>
-    <link rel="stylesheet" href="style.css"> <!-- CSS separado -->
+    <title>LINKS MARQUESA RUIVA</title>
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS adicional de animações -->
+    <link rel="stylesheet" href="animations.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container links-container">
         <div class="grain-overlay"></div>
         
-        <!-- PERFIL -->
-        <div class="profile-header">
-            <div class="profile-circle large">
-                <img src="profile1.jpg" alt="Marquesa ruiva">
+        <!-- Cabeçalho do perfil -->
+        <div class="profile-header animate-fade-down">
+            <div class="profile-circle large animate-pulse-glow">
+                <img src="profile.avif" alt="Profile">
             </div>
-            <h1 class="title">Marquesa ruiva</h1>
+            <h1 class="title">Marquesa Ruiva</h1>
             <p class="username">@marquesaruiva</p>
             
-            <div class="rating">
+            <div class="rating animate-stars">
                 <span class="star">★</span>
                 <span class="star">★</span>
                 <span class="star">★</span>
@@ -28,24 +31,25 @@
                 <span class="star">★</span>
             </div>
             
-            <p class="description">
-                Conteúdo exclusivo feito só pra você — acesse meu grupo VIP e veja tudo que tenho pra te mostrar.
+            <p class="description animate-fade-up">
+                Conteúdo exclusivo feito só pra você. Acesse meu grupo VIP e venha descobrir tudo o que tenho para mostrar.
             </p>
         </div>
 
-        <!-- LINKS COM SVG -->
+        <!-- Lista de links -->
         <div class="links-section">
             <!-- Privacy -->
-            <a href="https://privacy.com.br/@Marquesaruiva88" target="_blank" class="link-button privacy-btn" rel="noopener noreferrer">
+            <a href="https://privacy.com.br/@Marquesaruiva88" target="_blank" class="link-button privacy-btn animate-slide-right" rel="noopener noreferrer">
                 <div class="button-content">
                     <span class="button-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                            <circle cx="12" cy="12" r="2" />
+                        <!-- SVG Privacy (cadeado estilizado) -->
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor"/>
+                            <path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor"/>
                         </svg>
                     </span>
                     <div class="button-text">
-                        <strong>Privacy</strong>
+                        <strong>Privacy dela</strong>
                         <span>Conteúdo exclusivo</span>
                     </div>
                 </div>
@@ -53,33 +57,34 @@
             </a>
 
             <!-- Canal VIP Telegram -->
-            <a href="https://t.me/marquesaruivabot" target="_blank" class="link-button vip-btn" rel="noopener noreferrer">
+            <a href="https://t.me/marquesaruivabot" target="_blank" class="link-button vip-btn animate-slide-right" rel="noopener noreferrer">
                 <div class="button-content">
                     <span class="button-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
-                            <path d="M11 13l9 9" />
+                        <!-- SVG Telegram (avião de papel) -->
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor"/>
                         </svg>
                     </span>
                     <div class="button-text">
                         <strong>Canal VIP 🔞</strong>
-                        <span>Exclusivo no Telegram</span>
+                        <span>Conteúdo exclusivo no Telegram</span>
                     </div>
                 </div>
                 <span class="arrow">→</span>
             </a>
 
             <!-- Canal de Prévias -->
-            <a href="https://t.me/+Ik7S3tduPEM4ZTUx" target="_blank" class="link-button preview-btn" rel="noopener noreferrer">
+            <a href="https://t.me/+Ik7S3tduPEM4ZTUx" target="_blank" class="link-button preview-btn animate-slide-right" rel="noopener noreferrer">
                 <div class="button-content">
                     <span class="button-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-                            <path d="M12 6v6l4 2" />
+                        <!-- SVG fogo / prévia -->
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C8 6 6 9 6 13c0 3.3 2.7 6 6 6s6-2.7 6-6c0-4-2-7-6-11z" stroke="currentColor"/>
+                            <path d="M12 17c-2.2 0-4-1.8-4-4 0-2 1.5-4.5 4-7 2.5 2.5 4 5 4 7 0 2.2-1.8 4-4 4z" stroke="currentColor"/>
                         </svg>
                     </span>
                     <div class="button-text">
-                        <strong>Prévias grátis</strong>
+                        <strong>Canal de prévias grátis</strong>
                         <span>Conteúdo free</span>
                     </div>
                 </div>
@@ -87,13 +92,14 @@
             </a>
 
             <!-- Instagram -->
-            <a href="https://www.instagram.com/marquesaruiva?igsh=eDN0a3lhazBueDJ2&utm_source=qr" target="_blank" class="link-button instagram-btn" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/marquesaruiva?igsh=eDN0a3lhazBueDJ2&utm_source=qr" target="_blank" class="link-button instagram-btn animate-slide-right" rel="noopener noreferrer">
                 <div class="button-content">
                     <span class="button-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="2" width="20" height="20" rx="5" />
-                            <circle cx="12" cy="12" r="4" />
-                            <circle cx="17.5" cy="6.5" r="1" />
+                        <!-- SVG Instagram (câmera) -->
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor"/>
+                            <circle cx="12" cy="12" r="5" stroke="currentColor"/>
+                            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
                         </svg>
                     </span>
                     <div class="button-text">
@@ -105,16 +111,16 @@
             </a>
 
             <!-- Twitter/X -->
-            <a href="https://x.com/marquesaruiva88?s=11" target="_blank" class="link-button twitter-btn" rel="noopener noreferrer">
+            <a href="https://x.com/marquesaruiva88?s=11" target="_blank" class="link-button twitter-btn animate-slide-right" rel="noopener noreferrer">
                 <div class="button-content">
                     <span class="button-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
-                            <path d="M4 20l6.768 -6.768M19.5 4l-6.768 6.768" />
+                        <!-- SVG Twitter/X -->
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                         </svg>
                     </span>
                     <div class="button-text">
-                        <strong>Twitter/X</strong>
+                        <strong>Twitter</strong>
                         <span>@marquesaruiva88</span>
                     </div>
                 </div>
@@ -122,12 +128,12 @@
             </a>
 
             <!-- TikTok -->
-            <a href="https://www.tiktok.com/@marquesaruiva?_r=1&_t=ZS-97sXuiCmOIL" target="_blank" class="link-button tiktok-btn" rel="noopener noreferrer">
+            <a href="https://www.tiktok.com/@marquesaruiva?_r=1&_t=ZS-97sXuiCmOIL" target="_blank" class="link-button tiktok-btn animate-slide-right" rel="noopener noreferrer">
                 <div class="button-content">
                     <span class="button-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M16.5 2h-3v15a3.5 3.5 0 1 0 3.5 3.5V8.5A5.5 5.5 0 0 0 22 9V6a4 4 0 0 1-5.5-4z" />
-                            <path d="M7.5 11A5.5 5.5 0 0 0 13 16.5" />
+                        <!-- SVG TikTok (nota musical + símbolo) -->
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M16.6 5.82s.51.5 1.5.5v2.2s-1.1-.2-1.5-.5v4.9c0 3.2-2.5 5.9-5.7 5.9s-5.7-2.7-5.7-5.9 2.5-5.9 5.7-5.9c.5 0 1 .1 1.5.3v2.3c-.5-.2-1-.3-1.5-.3-2 0-3.6 1.6-3.6 3.6s1.6 3.6 3.6 3.6 3.6-1.6 3.6-3.6V1.5h2.2v4.32z"/>
                         </svg>
                     </span>
                     <div class="button-text">
@@ -139,14 +145,14 @@
             </a>
         </div>
 
-        <footer class="footer">
+        <footer class="footer animate-fade-up">
             <p>♥ feito com amor ♥</p>
             <p class="copyright">&copy; 2026</p>
         </footer>
     </div>
 
-    <!-- Script de verificação (mantido) -->
     <script>
+        // Verificação de segurança (redireciona se não veio do index)
         if (!sessionStorage.getItem('humanVerified')) {
             window.location.href = 'index.html';
         }
