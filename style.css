@@ -462,8 +462,8 @@ body {
 }
 
 /* =============================================
-   ANIMAÇÕES (INCLUÍDAS)
-   ============================================= */
+ANIMAÇÕES (INCLUÍDAS)
+============================================= */
 /* Entrada */
 .animate-fade-down {
     animation: fadeDown 0.8s ease-out forwards;
