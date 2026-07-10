@@ -500,3 +500,252 @@ body {
     display: none !important;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================
+   ANIMAÇÕES EXTENSAS PARA LINKS.HTML
+   ============================================ */
+
+/* --- ANIMAÇÕES DE ENTRADA (FADE / SLIDE) --- */
+
+.animate-fade-down {
+    animation: fadeDown 0.8s ease-out forwards;
+}
+
+.animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+    animation: slideRight 0.6s ease-out forwards;
+    opacity: 0; /* inicialmente invisível */
+}
+
+.animate-stars .star {
+    animation: starPop 0.5s ease forwards;
+    opacity: 0;
+    display: inline-block;
+}
+
+.animate-stars .star:nth-child(1) { animation-delay: 0.1s; }
+.animate-stars .star:nth-child(2) { animation-delay: 0.2s; }
+.animate-stars .star:nth-child(3) { animation-delay: 0.3s; }
+.animate-stars .star:nth-child(4) { animation-delay: 0.4s; }
+.animate-stars .star:nth-child(5) { animation-delay: 0.5s; }
+
+/* PULSO GLOW para a foto de perfil */
+.animate-pulse-glow {
+    animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* --- KEYFRAMES --- */
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes starPop {
+    0% {
+        opacity: 0;
+        transform: scale(0.2) rotate(-20deg);
+    }
+    60% {
+        transform: scale(1.3) rotate(5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 100, 150, 0.4);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 0 20px rgba(255, 100, 150, 0);
+        transform: scale(1.02);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 100, 150, 0);
+        transform: scale(1);
+    }
+}
+
+/* --- HOVER ANIMATIONS PARA OS BOTÕES --- */
+
+.link-button {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.link-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: opacity 0.4s, transform 0.4s;
+    pointer-events: none;
+}
+
+.link-button:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.link-button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+.link-button:hover .arrow {
+    animation: arrowMove 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes arrowMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(8px); }
+}
+
+/* --- ANIMAÇÃO DE CARREGAMENTO (opcional) --- */
+
+.link-button .button-icon svg {
+    transition: transform 0.4s ease;
+}
+
+.link-button:hover .button-icon svg {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* --- ANIMAÇÃO DE ENTRADA ESCALONADA PARA OS BOTÕES --- */
+
+.links-section .link-button:nth-child(1) { animation-delay: 0.1s; }
+.links-section .link-button:nth-child(2) { animation-delay: 0.2s; }
+.links-section .link-button:nth-child(3) { animation-delay: 0.3s; }
+.links-section .link-button:nth-child(4) { animation-delay: 0.4s; }
+.links-section .link-button:nth-child(5) { animation-delay: 0.5s; }
+.links-section .link-button:nth-child(6) { animation-delay: 0.6s; }
+
+/* --- RATING STARS --- */
+.rating .star {
+    color: #ffd700;
+    font-size: 1.4rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* --- FOOTER --- */
+.footer {
+    animation-duration: 1s;
+}
+
+/* --- RESPONSIVIDADE (opcional) --- */
+@media (max-width: 480px) {
+    .animate-slide-right {
+        animation: slideRightMobile 0.6s ease-out forwards;
+    }
+    @keyframes slideRightMobile {
+        0% { opacity: 0; transform: translateX(-20px); }
+        100% { opacity: 1; transform: translateX(0); }
+    }
+}
