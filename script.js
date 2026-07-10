@@ -6,20 +6,22 @@ function isBot() {
     const userAgent = navigator.userAgent.toLowerCase();
     const bots = [
         'bot', 'crawler', 'spider', 'scraper', 'curl', 
-        'wget', 'python', 'java', 'php', 'ruby'
+        'wget', 'python-requests', 'java/', 'php/', 'ruby/'
     ];
     
     return bots.some(bot => userAgent.includes(bot));
 }
 
-// Verificação de headless browser
+// Verificação de headless browser (MAIS SUAVE)
 function isHeadless() {
-    return !navigator.webdriver === false || 
-           window.chrome === undefined || 
-           navigator.plugins.length === 0;
+    // Apenas verifica webdriver (Selenium/Puppeteer)
+    if (navigator.webdriver === true) {
+        return true;
+    }
+    return false;
 }
 
-// Bloqueio de bots na entrada
+// Bloqueio de bots (APENAS bots óbvios)
 if (isBot() || isHeadless()) {
     console.warn('⚠️ Bot detectado - Acesso bloqueado');
     document.body.innerHTML = '<div style="background:#000;color:#333;height:100vh;display:flex;align-items:center;justify-content:center;font-family:Arial;"><h1>403 - Forbidden</h1></div>';
@@ -71,7 +73,7 @@ function startDrag(e) {
     isDragging = true;
     startX = getClientX(e);
     sliderButton.style.transition = 'none';
-    console.log('👆 Arraste iniciado');
+    console.log(' Arraste iniciado');
 }
 
 // ARRASTAR
@@ -138,13 +140,29 @@ function getClientX(e) {
     return e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
 }
 
-// VERIFICAÇÃO HUMANA CONCLUÍDA
+// VERIFICAÇÃO HUMANA COM TOKEN
 function verifyHuman() {
-    // Salvar sessão
-    sessionStorage.setItem('humanVerified', 'true');
-    sessionStorage.setItem('verifiedTime', new Date().getTime());
+    // Gerar token único
+    const timestamp = Date.now();
+    const random = Math.random().toString(36).substring(7);
+    const SECRET_KEY = 'minha_chave_secreta_2026_mude_isso';
+    const data = `${timestamp}-${random}-${SECRET_KEY}`;
     
-    console.log('💾 Sessão armazenada');
+    // Simple hash
+    let hash = 0;
+    for (let i = 0; i < data.length; i++) {
+        const char = data.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash;
+    }
+    
+    const token = btoa(`${timestamp}:${hash.toString(36)}`);
+    
+    // Salvar token
+    sessionStorage.setItem('authToken', token);
+    sessionStorage.setItem('verifiedTime', timestamp);
+    
+    console.log('💾 Token gerado e armazenado');
     
     // Fechar modal com animação
     const modal = document.getElementById('verification-modal');
@@ -153,26 +171,23 @@ function verifyHuman() {
     
     setTimeout(() => {
         modal.classList.add('hidden');
-        // Redirecionar
         console.log('🔄 Redirecionando para links.html...');
-        window.location.href = 'links.html';
+        window.location.href = `links.html?t=${encodeURIComponent(token)}`;
     }, 300);
 }
 
-// PROTEÇÃO ADICIONAL - Desabilitar clique direito
+// PROTEÇÕES ADICIONAIS
 document.addEventListener('contextmenu', function(e) {
     console.log('⚠️ Clique direito bloqueado');
     e.preventDefault();
 });
 
-// Desabilitar seleção de texto
 document.addEventListener('selectstart', function(e) {
     if (e.target.tagName !== 'INPUT') {
         e.preventDefault();
     }
 });
 
-// Detectar tentativas de inspeção
 document.addEventListener('keydown', function(e) {
     // F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
     if (
@@ -180,7 +195,7 @@ document.addEventListener('keydown', function(e) {
         (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
         (e.ctrlKey && e.key === 'U')
     ) {
-        console.warn('⚠️ Tentativa de inspeção detectada');
+        console.warn('️ Tentativa de inspeção detectada');
         e.preventDefault();
     }
 });
