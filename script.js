@@ -23,7 +23,7 @@ function isHeadless() {
 
 // Bloqueio de bots (APENAS bots óbvios)
 if (isBot() || isHeadless()) {
-    console.warn('⚠️ Bot detectado - Acesso bloqueado');
+    console.warn('️ Bot detectado - Acesso bloqueado');
     document.body.innerHTML = '<div style="background:#000;color:#333;height:100vh;display:flex;align-items:center;justify-content:center;font-family:Arial;"><h1>403 - Forbidden</h1></div>';
 }
 
@@ -73,7 +73,7 @@ function startDrag(e) {
     isDragging = true;
     startX = getClientX(e);
     sliderButton.style.transition = 'none';
-    console.log(' Arraste iniciado');
+    console.log('👆 Arraste iniciado');
 }
 
 // ARRASTAR
@@ -178,7 +178,7 @@ function verifyHuman() {
 
 // PROTEÇÕES ADICIONAIS
 document.addEventListener('contextmenu', function(e) {
-    console.log('⚠️ Clique direito bloqueado');
+    console.log('️ Clique direito bloqueado');
     e.preventDefault();
 });
 
@@ -195,7 +195,7 @@ document.addEventListener('keydown', function(e) {
         (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
         (e.ctrlKey && e.key === 'U')
     ) {
-        console.warn('️ Tentativa de inspeção detectada');
+        console.warn('⚠️ Tentativa de inspeção detectada');
         e.preventDefault();
     }
 });
