@@ -93,54 +93,53 @@
 
         // LINKS OFUSCADOS (Base64)
         function getLinks() {
-            const encodedLinks = [
-                {
-                    icon: '🍊',
-                    title: 'Privacy dela',
-                    subtitle: 'Conteúdo exclusivo',
-                    url: atob('aHR0cHM6Ly9wcml2YWN5LmNvbS5ici9ATWFycXVlc2FydWl2YTg4'),
-                    class: 'privacy-btn'
-                },
-                {
-                    icon: '',
-                    title: 'Canal VIP 🔞',
-                    subtitle: 'Conteúdo exclusivo no Telegram',
-                    url: atob('aHR0cHM6Ly90Lm1lL21hcnF1ZXNhcnVpdmFib3Q='),
-                    class: 'vip-btn'
-                },
-                {
-                    icon: '🔥',
-                    title: 'Canal de prévias grátis',
-                    subtitle: 'Conteúdo free',
-                    url: atob('aHR0cHM6Ly90Lm1lLytJa3MzU2R1UEVNNFpUVXg='),
-                    class: 'preview-btn'
-                },
-                {
-                    icon: '📷',
-                    title: 'Instagram',
-                    subtitle: '@marquesaruiva',
-                    url: atob('aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9tYXJxdWVzYXJ1aXZhP2lnaD1lRE4wYTN5a2F6MGJ1ZUoyJnV0bV9zb3VyY2U9cXI='),
-                    class: 'instagram-btn'
-                },
-                {
-                    icon: '🐦',
-                    title: 'Twitter',
-                    subtitle: '@marquesaruiva88',
-                    url: atob('aHR0cHM6Ly94LmNvbS9tYXJxdWVzYXJ1aXZhOD9zPTEx'),
-                    class: 'twitter-btn'
-                },
-                {
-                    icon: '🎵',
-                    title: 'TikTok',
-                    subtitle: '@marquesaruiva',
-                    url: atob('aHR0cHM6Ly93d3cudGlrdG9rLmNvbS9AbWFycXVlc2FydWl2YT9fcj0xJl90PVpTLTlzWHVpT2lM'),
-                    class: 'tiktok-btn'
-                }
-            ];
-            
-            return encodedLinks;
+    const encodedLinks = [
+        {
+            icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>`,
+            title: 'Privacy dela',
+            subtitle: 'Conteúdo exclusivo',
+            url: atob('aHR0cHM6Ly9wcml2YWN5LmNvbS5ici9ATWFycXVlc2FydWl2YTg4'),
+            class: 'privacy-btn'
+        },
+        {
+            icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>`,
+            title: 'Canal VIP 🔞',
+            subtitle: 'Conteúdo exclusivo no Telegram',
+            url: atob('aHR0cHM6Ly90Lm1lL21hcnF1ZXNhcnVpdmFib3Q='),
+            class: 'vip-btn'
+        },
+        {
+            icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>`,
+            title: 'Canal de prévias grátis',
+            subtitle: 'Conteúdo free',
+            url: atob('aHR0cHM6Ly90Lm1lLytJa3MzU2R1UEVNNFpUVXg='),
+            class: 'preview-btn'
+        },
+        {
+            icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>`,
+            title: 'Instagram',
+            subtitle: '@marquesaruiva',
+            url: atob('aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9tYXJxdWVzYXJ1aXZhP2lnaD1lRE4wYTN5a2F6MGJ1ZUoyJnV0bV9zb3VyY2U9cXI='),
+            class: 'instagram-btn'
+        },
+        {
+            icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`,
+            title: 'Twitter',
+            subtitle: '@marquesaruiva88',
+            url: atob('aHR0cHM6Ly94LmNvbS9tYXJxdWVzYXJ1aXZhOD9zPTEx'),
+            class: 'twitter-btn'
+        },
+        {
+            icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>`,
+            title: 'TikTok',
+            subtitle: '@marquesaruiva',
+            url: atob('aHR0cHM6Ly93d3cudGlrdG9rLmNvbS9AbWFycXVlc2FydWl2YT9fcj0xJl90PVpTLTlzWHVpT2lM'),
+            class: 'tiktok-btn'
         }
-
+    ];
+    
+    return encodedLinks;
+        }
         // RENDERIZAR LINKS
         function renderLinks() {
             const container = document.getElementById('links-container');
